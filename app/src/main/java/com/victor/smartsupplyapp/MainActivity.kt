@@ -10,7 +10,9 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -69,6 +71,13 @@ fun AppSmartSupply(){
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally
     ){
+        Image(
+            painter = painterResource(id = R.drawable.image_icon),
+            contentDescription = null,
+            modifier = Modifier
+                    .size(300.dp)
+                    .offset(y = (-40).dp)
+        )
 
         Column(
             verticalArrangement = Arrangement.spacedBy(16.dp),
@@ -90,7 +99,8 @@ fun AppSmartSupply(){
                 label = {
                     Text(text = "Gasolina (preço por litro):",
                     style = TextStyle(
-                        color = Color.Gray
+                        color = Color.Gray,
+                        fontSize = 16.sp
                         )
                     )
                 }
@@ -103,7 +113,8 @@ fun AppSmartSupply(){
                 label = {
                     Text(text = "Álcool (preço por litro):",
                     style = TextStyle(
-                        color = Color.Gray
+                        color = Color.Gray,
+                        fontSize = 16.sp
                         )
                     )
                 }
@@ -115,7 +126,8 @@ fun AppSmartSupply(){
                 ) {
                 Text(
                     text = "Calcular",
-                    color = Color.White
+                    color = Color.White,
+                    fontSize = 16.sp
                 )
             }
         }
